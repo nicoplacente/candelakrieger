@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://candelakrieger.codeluxe.tech/sitemap.xml
+Host: https://candelakrieger.codeluxe.tech

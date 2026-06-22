@@ -7,15 +7,58 @@ import { SectionHeading } from "@/components/section-heading";
 import { SiteHeader } from "@/components/site-header";
 import { contact, education, experience, skills } from "@/data/portfolio";
 
+const siteUrl = "https://candelakrieger.codeluxe.tech";
+
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: "KC Interiorismo",
-  jobTitle: "Diseñadora de interiores",
-  email: contact.email,
-  telephone: contact.phone,
-  knowsAbout: ["Diseño de interiores", "SketchUp", "AutoCAD", "V-Ray"],
-  address: { "@type": "PostalAddress", addressLocality: "Coronel Suárez", addressRegion: "Buenos Aires", addressCountry: "AR" },
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      name: "Candela Krieger",
+      alternateName: "KC Interiorismo",
+      url: siteUrl,
+      image: `${siteUrl}/cande.webp`,
+      jobTitle: "Diseñadora de interiores",
+      email: contact.email,
+      telephone: contact.phone,
+      sameAs: [contact.linkedinUrl, contact.instagramUrl],
+      knowsAbout: ["Diseño de interiores", "SketchUp", "AutoCAD", "V-Ray"],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Coronel Suárez",
+        addressRegion: "Buenos Aires",
+        addressCountry: "AR",
+      },
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${siteUrl}/#professional-service`,
+      name: "KC Interiorismo",
+      url: siteUrl,
+      image: `${siteUrl}/images/residencia-almagro.png`,
+      email: contact.email,
+      telephone: contact.phone,
+      founder: { "@id": `${siteUrl}/#person` },
+      sameAs: [contact.linkedinUrl, contact.instagramUrl],
+      areaServed: {
+        "@type": "AdministrativeArea",
+        name: "Buenos Aires, Argentina",
+      },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Coronel Suárez",
+        addressRegion: "Buenos Aires",
+        addressCountry: "AR",
+      },
+      serviceType: [
+        "Diseño de interiores",
+        "Interiorismo residencial",
+        "Renders arquitectónicos",
+        "Planos técnicos",
+      ],
+    },
+  ],
 };
 
 export default function Home() {
