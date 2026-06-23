@@ -108,7 +108,9 @@ export default function Home() {
             </div>
             <div className="about-copy">
               <p className="eyebrow">Sobre mí</p>
-              <h2 id="about-title">Curando espacios con intención y alma.</h2>
+              <h2 id="about-title">
+                Interiores pensados para habitar con bienestar.
+              </h2>
               <p>
                 Diseñadora de interiores graduada, enfocada en la creación de
                 espacios funcionales, estéticos y personalizados. Experiencia en

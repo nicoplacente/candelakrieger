@@ -79,7 +79,12 @@ export const projects = [
     title: "Proyecto Aura",
     description:
       "Diseño de un living contemporáneo con moboliario a medida, iluminación integrada y revestimientos en madera.",
-    services: ["Diseño de interiores", "Renders", "Planos técnicos"],
+    services: [
+      "Diseño de interiores",
+      "Renders",
+      "Planos técnicos",
+      "Presentación del proyecto",
+    ],
     reverse: false,
     cover: image(
       "tp1-cover",
@@ -139,7 +144,12 @@ export const projects = [
     title: "Proyecto Serena",
     description:
       "Proyecto residencial de un monoambiente que resuelve cocina, comedor, estar, dormitorio, baño y balcón en una propuesta funcional y armónica",
-    services: ["Diseño residencial", "Renders", "Planos técnicos"],
+    services: [
+      "Diseño residencial",
+      "Renders",
+      "Planos técnicos",
+      "Presentación del proyecto",
+    ],
     reverse: true,
     cover: image(
       "tp2-cover",
@@ -207,7 +217,12 @@ export const projects = [
     title: "Proyecto Armonía",
     description:
       "Diseño de un consultorio psicológico para adultos y niños, concebido para transmitir calma, confianza y bienestar.",
-    services: ["Presentación del proyecto", "Renders", "Planos técnicos"],
+    services: [
+      "Presentación del proyecto",
+      "Renders",
+      "Planos técnicos",
+      "Diseño de interiores",
+    ],
     reverse: false,
     cover: image(
       "tp3-cover",
@@ -277,7 +292,12 @@ export const projects = [
     title: "Proyecto Nexo",
     description:
       "Diseño de un living-comedor residencial con una propuesta contemporánea basada en materiales naturales, iluminación ambiental y una distribución pensada para favorecer la convivencia y el encuentro.",
-    services: ["Gestión de proyecto", "Renders", "Presentación de proyecto"],
+    services: [
+      "Gestión de proyecto",
+      "Renders",
+      "Presentación de proyecto",
+      "Planos técnicos",
+    ],
     reverse: true,
     cover: image(
       "tp5-cover",
@@ -340,7 +360,12 @@ export const projects = [
     title: "Proyecto Roma",
     description:
       "Diseño de mobiliario a medida para un comedor residencial, acompañado de alternativas de renderizado, axonometrías y documentación gráfica para su correcta representación y presentación.",
-    services: ["Diseño residencial", "Renders", "Presentación de proyecto"],
+    services: [
+      "Diseño residencial",
+      "Renders",
+      "Planos técnicos",
+      "Presentación de proyecto",
+    ],
     reverse: false,
     cover: image(
       "roma-cover",
@@ -397,7 +422,12 @@ export const projects = [
     title: "Proyecto Origen",
     description:
       "Proyecto residencial completo que comprende el diseño de cocina, comedor, living, dormitorio, baño y hall, integrando criterios de funcionalidad, estética y confort en todos sus espacios.",
-    services: ["Presentación del proyecto", "Renders", "Planos técnicos"],
+    services: [
+      "Presentación del proyecto",
+      "Renders",
+      "Planos técnicos",
+      "Gestión de proyecto",
+    ],
     reverse: true,
     cover: image(
       "final-cover",
