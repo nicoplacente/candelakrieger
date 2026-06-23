@@ -64,7 +64,15 @@ export function ProjectsShowcase({ projects }) {
       {projects.map((project, index) => (
         <article className={`project${project.reverse ? " project--reverse" : ""}`} key={project.title}>
           <div className="project-cover">
-            <Image src={project.cover.src} alt={project.cover.alt} fill priority={index === 0} sizes="(max-width: 900px) 100vw, 58vw" />
+            <Image
+              src={project.cover.src}
+              alt={project.cover.alt}
+              fill
+              priority={index === 0}
+              loading={project.cover.loading}
+              fetchPriority={project.cover.fetchPriority}
+              sizes="(max-width: 900px) 100vw, 58vw"
+            />
             <span aria-hidden="true">{project.number}</span>
           </div>
           <div className="project-copy">

@@ -14,7 +14,7 @@ Los certificados se abrirán en un diálogo amplio accesible, con cierre mediant
 
 Cada proyecto mostrará una única imagen de portada. El enlace actual se reemplazará por el botón «Ver proyecto completo», que abrirá un diálogo grande cargado dinámicamente.
 
-El dossier se organizará en tres categorías: renders, planos y carpetas de diseño. Cada categoría tendrá su propio arreglo de medios y un estado provisional cuando no haya archivos reales. La navegación se implementará como pestañas accesibles mediante teclado.
+El dossier se organizará en dos categorías: renders y planos. Cada categoría tendrá su propio arreglo de medios y un estado provisional cuando no haya archivos reales. La navegación se implementará como pestañas accesibles mediante teclado.
 
 ## Movimiento
 

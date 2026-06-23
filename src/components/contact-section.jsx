@@ -51,7 +51,7 @@ export function ContactSection() {
           </address>
         </div>
         <form className="contact-form" onSubmit={handleSubmit}>
-          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_template" value="box" />
           <input type="hidden" name="_captcha" value="false" />
           <div className="form-honeypot" aria-hidden="true" inert>
             <label htmlFor="company">Empresa</label>

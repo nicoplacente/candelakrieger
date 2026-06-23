@@ -6,7 +6,7 @@ Reemplazar los proyectos y certificados ficticios por todo el contenido disponib
 
 ## Proyectos
 
-El portfolio mostrará seis proyectos, respetando el orden de sus carpetas: `tp1`, `tp2`, `tp3`, `tp5`, `roma` y `proyecto-final`. Cada proyecto utilizará un render real como portada y expondrá todos sus renders, planos de AutoCAD y carpetas de diseño disponibles. Las categorías sin archivos se mostrarán vacías, sin contenido provisional.
+El portfolio mostrará seis proyectos, respetando el orden de sus carpetas: `tp1`, `tp2`, `tp3`, `tp5`, `roma` y `proyecto-final`. Cada proyecto utilizará un render real como portada y expondrá todos sus renders y planos de AutoCAD disponibles. Las categorías sin archivos se mostrarán vacías, sin contenido provisional.
 
 ## Certificados
 

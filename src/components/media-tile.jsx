@@ -14,9 +14,24 @@ export function MediaTile({ media, label, sizes = "(max-width: 760px) 100vw, 50v
           <small>{label}</small>
         </div>
       ) : media.src && naturalRatio ? (
-        <Image src={media.src} alt={media.alt} width={media.width} height={media.height} sizes={sizes} />
+        <Image
+          src={media.src}
+          alt={media.alt}
+          width={media.width}
+          height={media.height}
+          loading={media.loading}
+          fetchPriority={media.fetchPriority}
+          sizes={sizes}
+        />
       ) : media.src ? (
-        <Image src={media.src} alt={media.alt} fill sizes={sizes} />
+        <Image
+          src={media.src}
+          alt={media.alt}
+          fill
+          loading={media.loading}
+          fetchPriority={media.fetchPriority}
+          sizes={sizes}
+        />
       ) : (
         <div className="media-placeholder" aria-label={`${media.alt}. Imagen pendiente de cargar.`} role="img">
           <span>{label}</span>

@@ -853,7 +853,37 @@ h3 {
   margin: clamp(0.75rem, 2vw, 1.5rem);
   overflow: hidden;
 }
-.project-lightbox__stage img {
+.project-lightbox__track {
+  --swipe-offset: 0px;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  transform: translate3d(calc(-100% + var(--swipe-offset)), 0, 0);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+.project-lightbox__track.is-dragging,
+.project-lightbox__track.is-resetting {
+  transition: none;
+}
+.project-lightbox__track.is-swiping-previous {
+  transform: translate3d(0, 0, 0);
+}
+.project-lightbox__track.is-swiping-next {
+  transform: translate3d(-200%, 0, 0);
+}
+.project-lightbox__track--single {
+  grid-template-columns: 100%;
+  transform: none;
+  transition: none;
+}
+.project-lightbox__slide {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+.project-lightbox__slide img {
   object-fit: contain;
 }
 .project-lightbox__navigation {
@@ -991,7 +1021,14 @@ h3 {
 .contact-form textarea:focus {
   border-color: white;
 }
-.contact-form textarea { min-height: 7rem; field-sizing: content; }
+.contact-form textarea {
+  min-height: 7rem;
+  field-sizing: content !important;
+  height: auto !important;
+  resize: none;
+  max-height: 270px;
+  width: 100%;
+}
 .contact-form button {
   width: 100%;
   min-height: 3.5rem;
@@ -1218,6 +1255,7 @@ h3 {
   }
   .project-lightbox__stage {
     margin: 0.5rem;
+    touch-action: pan-y;
   }
   .project-lightbox__navigation button {
     min-width: 0;

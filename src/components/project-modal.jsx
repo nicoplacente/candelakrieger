@@ -8,7 +8,6 @@ import { ProjectLightbox } from "./project-lightbox";
 const categories = [
   { key: "renders", label: "Renders" },
   { key: "planos", label: "Planos" },
-  { key: "carpetasDiseno", label: "Carpetas de diseño" },
 ];
 
 export default function ProjectModal({ project, projectCount, onClose }) {
@@ -80,7 +79,7 @@ export default function ProjectModal({ project, projectCount, onClose }) {
             ) : <MediaTile key={item.id} media={item} label={`${availableCategories[activeIndex].label} ${index + 1}`} sizes="(max-width: 760px) 100vw, 48vw" />)}
           </section>
         </div>
-        {selectedImage ? <ProjectLightbox categoryLabel={availableCategories[activeIndex].label} image={selectedImage} imageCount={activeImages.length} imageIndex={selectedImageIndex} onClose={closeLightbox} onNext={showNextImage} onPrevious={showPreviousImage} /> : null}
+        {selectedImage ? <ProjectLightbox categoryLabel={availableCategories[activeIndex].label} images={activeImages} imageIndex={selectedImageIndex} onClose={closeLightbox} onNext={showNextImage} onPrevious={showPreviousImage} /> : null}
       </div>
     </ModalOverlay>
   );

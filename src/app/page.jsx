@@ -64,45 +64,95 @@ const structuredData = {
 export default function Home() {
   return (
     <>
-      <a className="skip-link" href="#contenido">Saltar al contenido</a>
+      <a className="skip-link" href="#contenido">
+        Saltar al contenido
+      </a>
       <SiteHeader />
       <main id="contenido">
         <section className="hero" id="inicio" aria-labelledby="hero-title">
-          <Image src="/images/residencia-almagro.png" alt="Interior contemporáneo sereno y luminoso" fill priority sizes="100vw" />
+          <Image
+            src="/images/residencia-almagro.png"
+            alt="Interior contemporáneo sereno y luminoso"
+            fill
+            priority
+            sizes="100vw"
+          />
           <div className="hero-overlay" />
           <div className="hero-content">
             <p className="eyebrow">Interiorismo &amp; Dirección Creativa</p>
-            <h1 id="hero-title">Arquitectura de Interiores<br />que respira.</h1>
-            <a className="button" href="#proyectos">Ver proyectos</a>
+            <h1 id="hero-title">
+              Diseño de Interiores
+              <br />
+              con identidad propia
+            </h1>
+            <a className="button" href="#proyectos">
+              Ver proyectos
+            </a>
           </div>
           <p className="hero-note">Coronel Suárez — Buenos Aires</p>
         </section>
 
-        <section className="section about" id="sobre-mi" aria-labelledby="about-title">
+        <section
+          className="section about"
+          id="sobre-mi"
+          aria-labelledby="about-title"
+        >
           <div className="container about-grid">
             <div className="portrait-frame">
-              <Image src="/cande.webp" alt="Candela Krieger | Diseñadora de interiores" fill sizes="(max-width: 760px) 100vw, 38vw" />
+              <Image
+                src="/cande.webp"
+                alt="Candela Krieger | Diseñadora de interiores"
+                fill
+                sizes="(max-width: 760px) 100vw, 38vw"
+              />
             </div>
             <div className="about-copy">
               <p className="eyebrow">Sobre mí</p>
               <h2 id="about-title">Curando espacios con intención y alma.</h2>
-              <p>Diseñadora de interiores graduada, enfocada en la creación de espacios funcionales, estéticos y personalizados. Experiencia en proyectos residenciales, desarrollo de propuestas de interiorismo, selección de materiales y elaboración de renders.</p>
-              <p>Integro mi formación en Psicopedagogía y Comunicación con la mirada del interiorismo para crear espacios que respondan a las necesidades de cada cliente.</p>
+              <p>
+                Diseñadora de interiores graduada, enfocada en la creación de
+                espacios funcionales, estéticos y personalizados. Experiencia en
+                proyectos residenciales, desarrollo de propuestas de
+                interiorismo, selección de materiales y elaboración de renders.
+              </p>
+              <p>
+                Integro mi formación en Psicopedagogía y Comunicación con la
+                mirada del interiorismo para crear espacios que respondan a las
+                necesidades de cada cliente.
+              </p>
               <dl className="about-facts">
-                <div><dt>Enfoque</dt><dd>Interiores con alma y funcionalidad real</dd></div>
-                <div><dt>Ubicación</dt><dd>{contact.location}</dd></div>
+                <div>
+                  <dt>Enfoque</dt>
+                  <dd>Interiores con alma y funcionalidad real</dd>
+                </div>
+                <div>
+                  <dt>Ubicación</dt>
+                  <dd>{contact.location}</dd>
+                </div>
               </dl>
             </div>
           </div>
         </section>
 
-        <section className="section section--tinted" id="experiencia" aria-labelledby="experience-title">
+        <section
+          className="section section--tinted"
+          id="experiencia"
+          aria-labelledby="experience-title"
+        >
           <div className="container">
-            <div id="experience-title"><SectionHeading eyebrow="Trayectoria" title="Experiencia Profesional" /></div>
+            <div id="experience-title">
+              <SectionHeading
+                eyebrow="Trayectoria"
+                title="Experiencia Profesional"
+              />
+            </div>
             <div className="timeline">
               {experience.map((item) => (
                 <article className="experience-card" key={item.role}>
-                  <div><h3>{item.role}</h3><time>{item.period}</time></div>
+                  <div>
+                    <h3>{item.role}</h3>
+                    <time>{item.period}</time>
+                  </div>
                   <p>{item.description}</p>
                 </article>
               ))}
@@ -112,23 +162,47 @@ export default function Home() {
 
         <ProjectsSection />
 
-        <section className="section" id="formacion" aria-labelledby="education-title">
+        <section
+          className="section"
+          id="formacion"
+          aria-labelledby="education-title"
+        >
           <div className="container">
-            <div id="education-title"><SectionHeading eyebrow="Formación" title="Educación" /></div>
+            <div id="education-title">
+              <SectionHeading eyebrow="Formación" title="Educación" />
+            </div>
             <div className="education-grid">
-              {education.map((item) => <article key={item.title}><h3>{item.title}</h3><p>{item.detail}</p></article>)}
+              {education.map((item) => (
+                <article key={item.title}>
+                  <h3>{item.title}</h3>
+                  <p>{item.detail}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
 
         <CertificatesSection />
 
-        <section className="section section--tinted" id="habilidades" aria-labelledby="skills-title">
+        <section
+          className="section section--tinted"
+          id="habilidades"
+          aria-labelledby="skills-title"
+        >
           <div className="container">
-            <div id="skills-title"><SectionHeading eyebrow="Competencias" title="Habilidades" /></div>
+            <div id="skills-title">
+              <SectionHeading eyebrow="Competencias" title="Habilidades" />
+            </div>
             <div className="skills-grid">
               {skills.map((group) => (
-                <div key={group.title}><h3>{group.title}</h3><ul>{group.items.map((item) => <li key={item}>{item}</li>)}</ul></div>
+                <div key={group.title}>
+                  <h3>{group.title}</h3>
+                  <ul>
+                    {group.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
               ))}
             </div>
           </div>
@@ -137,11 +211,27 @@ export default function Home() {
         <ContactSection />
       </main>
       <footer className="site-footer">
-        <a className="wordmark" href="#inicio">KC Interiorismo</a>
-        <nav aria-label="Redes sociales"><a href={contact.instagramUrl} target="_blank" rel="noreferrer">Instagram</a><a href={contact.linkedinUrl} target="_blank" rel="noreferrer">LinkedIn</a></nav>
-        <p>© <CurrentYear /> KC Interiorismo. Todos los derechos reservados.</p>
+        <a className="wordmark" href="#inicio">
+          KC Interiorismo
+        </a>
+        <nav aria-label="Redes sociales">
+          <a href={contact.instagramUrl} target="_blank" rel="noreferrer">
+            Instagram
+          </a>
+          <a href={contact.linkedinUrl} target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+        </nav>
+        <p>
+          © <CurrentYear /> KC Interiorismo. Todos los derechos reservados.
+        </p>
       </footer>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
+      />
     </>
   );
 }
