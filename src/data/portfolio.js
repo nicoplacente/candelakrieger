@@ -515,7 +515,7 @@ export const certificates = [
     ),
     title: "Diseño de Interiores I",
     issuer: "Idílica Deco",
-    year: "2025",
+    year: "2025 - 2026",
   },
   {
     ...image(
@@ -527,7 +527,7 @@ export const certificates = [
     ),
     title: "Diseño de Interiores II",
     issuer: "Idílica Deco",
-    year: "2025",
+    year: "2025 - 2026",
   },
   {
     ...image(
@@ -539,7 +539,7 @@ export const certificates = [
     ),
     title: "Project Manager",
     issuer: "Idílica Deco",
-    year: "2026",
+    year: "2025 - 2026",
   },
   {
     ...image(
@@ -551,7 +551,7 @@ export const certificates = [
     ),
     title: "AutoCAD",
     issuer: "Idílica Deco",
-    year: "Autogestivo",
+    year: "2025 - 2026",
   },
   {
     ...image(
@@ -563,7 +563,7 @@ export const certificates = [
     ),
     title: "SketchUp y V-Ray",
     issuer: "Idílica Deco",
-    year: "Autogestivo",
+    year: "2025 - 2026",
   },
   {
     ...image(
@@ -575,7 +575,7 @@ export const certificates = [
     ),
     title: "Espacios Exteriores y Paisajismo",
     issuer: "Idílica Deco",
-    year: "Autogestivo",
+    year: "2025 - 2026",
   },
   {
     ...image(

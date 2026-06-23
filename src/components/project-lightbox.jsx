@@ -160,8 +160,8 @@ export function ProjectLightbox({ categoryLabel, images, imageIndex, onClose, on
       >
         <div ref={trackRef} className={`project-lightbox__track${imageCount === 1 ? " project-lightbox__track--single" : ""}`} onTransitionEnd={handleTransitionEnd}>
           {visibleImages.map(({ media, position }) => (
-            <div className="project-lightbox__slide" key={`${position}-${media.id}`} aria-hidden={position === "current" ? undefined : true}>
-              <Image src={media.src} alt={position === "current" ? media.alt : ""} fill sizes="100vw" />
+            <div className="project-lightbox__slide" key={imageCount > 2 ? media.id : `${position}-${media.id}`} aria-hidden={position === "current" ? undefined : true}>
+              <Image src={media.src} alt={position === "current" ? media.alt : ""} fill sizes="100vw" loading="eager" decoding="sync" />
             </div>
           ))}
         </div>
