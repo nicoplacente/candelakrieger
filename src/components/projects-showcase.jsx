@@ -17,6 +17,9 @@ export function ProjectsShowcase({ projects }) {
 
     let animationContext;
     let cancelled = false;
+    const shouldAnimateHorizontally = !window.matchMedia(
+      "(max-width: 900px), (pointer: coarse)",
+    ).matches;
 
     Promise.all([import("gsap"), import("gsap/dist/ScrollTrigger")]).then(([gsapModule, scrollTriggerModule]) => {
       if (cancelled) return;
@@ -37,12 +40,14 @@ export function ProjectsShowcase({ projects }) {
             ease: "power3.out",
             scrollTrigger: { trigger: project, start: "top 82%", once: true },
           });
-          gsap.fromTo(copy, { x: index % 2 === 0 ? 28 : -28 }, {
-            x: 0,
-            duration: 1.1,
-            ease: "power3.out",
-            scrollTrigger: { trigger: project, start: "top 78%", once: true },
-          });
+          if (shouldAnimateHorizontally) {
+            gsap.fromTo(copy, { x: index % 2 === 0 ? 28 : -28 }, {
+              x: 0,
+              duration: 1.1,
+              ease: "power3.out",
+              scrollTrigger: { trigger: project, start: "top 78%", once: true },
+            });
+          }
           gsap.fromTo(image, { yPercent: -3, scale: 1.04 }, {
             yPercent: 3,
             scale: 1.04,

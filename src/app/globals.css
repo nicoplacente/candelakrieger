@@ -30,6 +30,17 @@ body {
   font-size: 1rem;
   line-height: 1.7;
 }
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+@supports (overflow: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
 body,
 button,
 input,
