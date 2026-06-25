@@ -85,9 +85,14 @@ export default function Home() {
               <br />
               con identidad propia
             </h1>
-            <a className="button" href="#proyectos">
-              Ver proyectos
-            </a>
+            <div className="hero-actions">
+              <a className="button" href="#proyectos">
+                Ver proyectos
+              </a>
+              <a className="button button--secondary" href="/cv-candelakrieger.pdf" download>
+                Descargar CV
+              </a>
+            </div>
           </div>
           <p className="hero-note">Coronel Suárez — Buenos Aires</p>
         </section>
